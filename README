@@ -1,0 +1,13 @@
+Particle Tracer
+by Phil Cote
+http://www.blenderaddons.com
+
+Description: Creates curves based on location of particles at a specific point in time
+
+How to use:
+1.  Set up a scene object with an emitter particle system.
+2.  Adjust for the unborn, alive, and dead particle lifecycle.
+3.  Advance the timeline til the particles are in the desired position.
+4.  MAKE SURE you select the emitter object AFTER you'vbe advanced the timeline.
+5.  In the tools menu in the 3D view, click "Make Curve" under the Particle Tracer Panel
+6.  Adjust for what kind of what life state of particles to include as well as the curve thickness bevel.
