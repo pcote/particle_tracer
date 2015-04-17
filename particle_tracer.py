@@ -52,14 +52,11 @@ bl_info = {
     'category': 'Add Curve'}
 
 
-import bpy
-
-
 def get_particle_sys(ob):
     """
     Grab the first particle system available or None if there aren't any.
     """
-    if ob == None:
+    if ob is None:
         return None
 
     psys_list = [mod for mod in ob.modifiers if mod.type == 'PARTICLE_SYSTEM']
@@ -114,11 +111,11 @@ class PTracerOp(bpy.types.Operator):
     bl_options = {"REGISTER", "UNDO"}
 
     curve_name = bpy.props.StringProperty(name="Curve Name",
-                                         default="ptracecurve")
+                                          default="ptracecurve")
     include_alive = bpy.props.BoolProperty(name="Alive Particles", default=True)
     include_dead = bpy.props.BoolProperty(name="Dead Particles", default=True)
     include_unborn = bpy.props.BoolProperty(name="Unborn Particles",
-                                           default=True)
+                                            default=True)
     thickness = bpy.props.FloatProperty(name="Thickness", min=0, max=1)
 
     @classmethod
